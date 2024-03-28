@@ -6,7 +6,8 @@ import plotly.express as px
 import time
 
 # Connect to MongoDB
-mongo_uri = "mongodb+srv://atharva_177:Atharva1234@cluster0.dexnpyi.mongodb.net/envision"  # Update with your MongoDB URI
+mongo_uri = "mongodb+srv://atharva_177:Atharva1234@cluster0.dexnpyi.mongodb.net/envision"
+  # Update with your MongoDB URI
 mongo_db_name = "envision"  # Update with your MongoDB database name
 mongo_collection_name = "videos"  # Update with your MongoDB collection name
 
