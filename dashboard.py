@@ -1,9 +1,7 @@
 import streamlit as st
 import pandas as pd
 from pymongo import MongoClient
-import seaborn as sns
 import plotly.express as px
-import time
 
 # Connect to MongoDB
 mongo_uri = "mongodb+srv://atharva_177:Atharva1234@cluster0.dexnpyi.mongodb.net/envision"
@@ -97,7 +95,8 @@ def main():
     
     # Button to manually refresh the graph and database view
     if st.button("Refresh"):
-        st.rerun()  # Refresh the page to display updated graph and database view
+        df = load_data()  # Refresh data from MongoDB
+        st.experimental_rerun()  # Refresh the page to display updated graph and database view
 
 if __name__ == "__main__":
     main()
