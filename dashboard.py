@@ -92,6 +92,8 @@ def main():
     
     st.dataframe(df)
  # Refresh the page to display updated graph and database view
+    if st.button("Refresh"):
+        st.rerun()
 
 if __name__ == "__main__":
     main()
