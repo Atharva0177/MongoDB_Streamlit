@@ -87,6 +87,10 @@ def main():
     generate_graph(df, plot_style, x_column, y_column, color_column)
     
     # Database view
+    st.header("Entire Database")
+    st.write("View the entire database as an Excel sheet.")
+    
+    st.dataframe(df)
  # Refresh the page to display updated graph and database view
 
 if __name__ == "__main__":
