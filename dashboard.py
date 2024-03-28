@@ -8,13 +8,9 @@ import time
 # Connect to MongoDB
 mongo_uri = "mongodb+srv://atharva_177:Atharva1234@cluster0.dexnpyi.mongodb.net/envision"
 
-client = pymongo.MongoClient(mongo_uri, connect=False)
-db = client["envision"]  # Use the 'envision' database
-table = db["videos"]  # Update with your MongoDB collection name
-
 client = MongoClient(mongo_uri)
-db = client[mongo_db_name]
-collection = db[mongo_collection_name]
+db = client["envision"]  # Use the 'envision' database
+collection = db["videos"]  # Update with your MongoDB collection name
 
 @st.cache(persist=True, ttl=10)  # Cache the data for 10 seconds
 def load_data():
