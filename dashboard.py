@@ -4,7 +4,7 @@ from pymongo import MongoClient
 import plotly.express as px
 
 # Connect to MongoDB
-mongo_uri = "mongodb+srv://atharva_177:Atharva1234@cluster0.dexnpyi.mongodb.net/envision"
+mongo_uri = "mongodb+srv://atharva_177:Atharva1234@cluster0.dexnpyi.mongodb.net/"
 
 client = MongoClient(mongo_uri)
 db = client["envision"]  # Use the 'envision' database
