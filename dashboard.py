@@ -10,7 +10,6 @@ client = MongoClient(mongo_uri)
 db = client["envision"]  # Use the 'envision' database
 collection = db["videos"]  # Update with your MongoDB collection name
 
-@st.cache(persist=True, ttl=10)  # Cache the data for 10 seconds
 def load_data():
     try:
         items = collection.find()
