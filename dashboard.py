@@ -7,9 +7,10 @@ import time
 
 # Connect to MongoDB
 mongo_uri = "mongodb+srv://atharva_177:Atharva1234@cluster0.dexnpyi.mongodb.net/envision"
-  # Update with your MongoDB URI
-mongo_db_name = "envision"  # Update with your MongoDB database name
-mongo_collection_name = "videos"  # Update with your MongoDB collection name
+
+client = pymongo.MongoClient(mongo_uri, connect=False)
+db = client["envision"]  # Use the 'envision' database
+table = db["videos"]  # Update with your MongoDB collection name
 
 client = MongoClient(mongo_uri)
 db = client[mongo_db_name]
