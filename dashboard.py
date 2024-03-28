@@ -88,15 +88,7 @@ def main():
     generate_graph(df, plot_style, x_column, y_column, color_column)
     
     # Database view
-    st.header("Entire Database")
-    st.write("View the entire database as an Excel sheet.")
-    
-    st.dataframe(df)
-    
-    # Button to manually refresh the graph and database view
-    if st.button("Refresh"):
-        df = load_data()  # Refresh data from MongoDB
-        st.experimental_rerun()  # Refresh the page to display updated graph and database view
+ # Refresh the page to display updated graph and database view
 
 if __name__ == "__main__":
     main()
